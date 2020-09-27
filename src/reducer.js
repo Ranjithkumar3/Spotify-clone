@@ -20,8 +20,14 @@ const reducer = (state, action) => {
                 ...state,
                 token: action.token
             }
-            default:
-                return state;
+        case "SET_PLAYLISTS":
+            return{
+                ...state,
+                playlists: action.playlists
+            }
+
+        default:
+            return state;
     }
 }
 
